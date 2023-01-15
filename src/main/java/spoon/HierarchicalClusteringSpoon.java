@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 import java.util.Stack;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import identificationModule.Cluster;
 import identificationModule.CoupleOfClasses;
@@ -121,16 +122,17 @@ public class HierarchicalClusteringSpoon {
 				clusters.remove(partA);
 				clusters.remove(partB);
 				// Affichage
-				System.out.println("\nFusion entre clusters");
-				System.out.println(" Partie A De la fussion : ");
-				partA.getClasses().forEach(classe -> System.out.println("Classe :  " + classe.toString()));
+				System.out.println("Fusion entre clusters");
+				System.out.println("Partie A De la fusion : ");
+				partA.getClasses().forEach(classe -> System.out.println("Classe : " + classe.toString()));
 				System.out.println("Parie B de la fusion");
-				partB.getClasses().forEach(classe -> System.out.println("Classe :  " + classe.toString()));
-				System.out.println("valeur du couplage : " + greaterCouplingMetricValue);
-				System.out.println("\n\n");
+				partB.getClasses().forEach(classe -> System.out.println("Classe : " + classe.toString()));
+				System.out.println("Valeur du couplage : " + greaterCouplingMetricValue);
 				System.out.println("Liste des cluster de cette étape: ");
+				AtomicInteger i = new AtomicInteger();
 				clusters.forEach(cluster -> {
-					System.out.println("\n Cluster :");
+					i.getAndIncrement();
+					System.out.println("Cluster : "+i);
 					cluster.display();
 				});
 			} else {
@@ -161,9 +163,8 @@ public class HierarchicalClusteringSpoon {
 	public void displayHierarchicalClustering(LinkedList<Cluster> clusters) {
 		System.out.println("Affichage de la hierarchie des clusters");
 		for (Cluster cluster : clusters) {
-			System.out.println("nouveau Cluster");
+			System.out.println("Nouveau Cluster");
 			cluster.display();
-			System.out.println("\n");
 		}
 	}
 

@@ -18,29 +18,15 @@ public class CoupleOfClasses {
 		this.couplageMetricValue = couplageMetricValue;
 	}
 
-	// Setters && Setters
 	public String getClassNameA() {
 		return classNameA;
-	}
-
-	public void setClassNameA(String classNameA) {
-		this.classNameA = classNameA;
 	}
 
 	public String getClassNameB() {
 		return classNameB;
 	}
 
-	public void setClassNameB(String classNameB) {
-		this.classNameB = classNameB;
-	}
-
 	public double getCouplageMetricValue() {
 		return couplageMetricValue;
 	}
-
-	public void setCouplageMetricValue(double couplageMetricValue) {
-		this.couplageMetricValue = couplageMetricValue;
-	}
-
 }

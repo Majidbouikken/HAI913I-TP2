@@ -52,7 +52,7 @@ public class Cluster {
 		for (String className : classes) {
 			System.out.println("Classe : " + className);
 		}
-		System.out.println("valeur de la métrique de couplage de ce cluster : " + metricCouplingValue + "\n");
+		System.out.println("Valeur de la métrique de couplage de ce cluster : " + metricCouplingValue + "\n");
 	}
 
 	public void displayP() {
@@ -60,22 +60,12 @@ public class Cluster {
 			System.out.println("Classe : " + className);
 		}
 	}
-	// Getters && Setters
 
 	public Set<String> getClasses() {
 		return classes;
 	}
 
-	public void setClasses(Set<String> classes) {
-		this.classes = classes;
-	}
-
 	public double getMetricCouplingValue() {
 		return metricCouplingValue;
 	}
-
-	public void setMetricCouplingValue(double metricCouplingValue) {
-		this.metricCouplingValue = metricCouplingValue;
-	}
-
 }

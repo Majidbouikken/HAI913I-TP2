@@ -19,7 +19,7 @@ public class HierarchicalClustering {
         // TODO Auto-generated constructor stub
     }
 
-    public LinkedList<Cluster> createClustersInitilised(CallGraph2 graph) {
+    public LinkedList<Cluster> createClustersInitialized(CallGraph2 graph) {
         Set<TypeDeclaration> classes = graph.getClasses();
         LinkedList<Cluster> clusters = new LinkedList<Cluster>();
         Cluster newCluster;
@@ -105,16 +105,16 @@ public class HierarchicalClustering {
                 clusters.remove(partA);
                 clusters.remove(partB);
                 // Affichage
-                System.out.println("\nFusion entre clusters");
-                System.out.println(" Partie A De la fussion : ");
-                partA.getClasses().forEach(classe -> System.out.println("Classe :  " + classe.toString()));
+                System.out.println("Fusion entre clusters");
+                System.out.println("Partie A De la fusion : ");
+                partA.getClasses().forEach(classe -> System.out.println("Classe : " + classe.toString()));
                 System.out.println("Parie B de la fusion");
-                partB.getClasses().forEach(classe -> System.out.println("Classe :  " + classe.toString()));
+                partB.getClasses().forEach(classe -> System.out.println("Classe : " + classe.toString()));
                 System.out.println("valeur du couplage : " + greaterCouplingMetricValue);
-                System.out.println("\n\n");
-                System.out.println("Liste des cluster de cette étape: ");
+                System.out.println("Liste des cluster de cette étape : ");
+                int i = 0;
                 clusters.forEach(cluster -> {
-                    System.out.println("\n Cluster :");
+                    System.out.println("Cluster : ");
                     cluster.display();
                 });
             } else {
@@ -142,17 +142,16 @@ public class HierarchicalClustering {
     }
 
     public void displayHierarchicalClustering(LinkedList<Cluster> clusters) {
-        System.out.println("Affichage de la hierarchie des clusters");
+        System.out.println("Regroupement hiérarchique des clusters :");
         int i = 0;
         for (Cluster cluster : clusters) {
             i++;
             System.out.println("Cluster " + i);
             cluster.display();
-            System.out.println("\n");
         }
     }
 
-    // code de la question 2 de l'exercice 2
+    // Exercice 2, Question 2
     public Stack<Cluster> createHierarchicalClusteringForPartition(LinkedList<Cluster> clusters, LinkedList<CoupleOfClasses> couplesOfClasses) {
         Stack<Cluster> hierarchicalStackOfClusters = new Stack<Cluster>();
         Cluster clusterA, clusterB, partA, partB, tempCluster;
@@ -198,7 +197,7 @@ public class HierarchicalClustering {
     }
 
     public LinkedList<Cluster> createPartitions(LinkedList<Cluster> clustersInitialized, LinkedList<CoupleOfClasses> couplesOfClassesFilled) {
-        LinkedList<Cluster> listOfpartitions = new LinkedList<Cluster>();
+        LinkedList<Cluster> listOfPartitions = new LinkedList<Cluster>();
         Stack<Cluster> stackOfCluster = createHierarchicalClusteringForPartition(clustersInitialized,
                 couplesOfClassesFilled);
         Cluster father;
@@ -206,32 +205,27 @@ public class HierarchicalClustering {
         Cluster secondSon;
         LinkedList<Cluster> useLessPartitions = new LinkedList();
         double tempMoy = 0;
-        System.out.println("\nConstruction des partitions");
+        System.out.println("Construction des partitions");
         while (!stackOfCluster.isEmpty()) {
             father = stackOfCluster.pop();
             secondSon = stackOfCluster.pop();
             firstSon = stackOfCluster.pop();
             if (isValidCluster(father, useLessPartitions)) {
-                System.out.println("\n Couplage du père : " + father.getMetricCouplingValue());
+                System.out.println("Couplage du père : " + father.getMetricCouplingValue());
                 tempMoy = (firstSon.getMetricCouplingValue() + secondSon.getMetricCouplingValue()) / 2;
-                System.out.println("\n moyenne des couplages des fils : " + tempMoy);
+                System.out.println("Moyenne des couplages des fils : " + tempMoy);
                 if (father.getMetricCouplingValue() > tempMoy) {
-                    System.out.println("\nOn ajoute le père à la partition");
-                    listOfpartitions.add(father);
+                    System.out.println("On ajoute le père à la partition");
+                    listOfPartitions.add(father);
                     useLessPartitions.add(father);
-
                 } else {
-                    System.out.println(
-                            "\nLa valeur du couplage du père est inférieur à la moyenne des valeurs du couplage des fils donc on décompose le module en 2 partition ");
+                    System.out.println("La valeur du couplage du père est inférieur à la moyenne des valeurs du couplage des fils donc on décompose le module en 2 partition ");
                 }
-
             }
-
-            System.out.println("\n Partitions Construites à cette étape : ");
-            listOfpartitions.forEach(partition -> partition.display());
+            System.out.println("Partitions Construites à cette étape : ");
+            listOfPartitions.forEach(Cluster::display);
         }
-
-        return listOfpartitions;
+        return listOfPartitions;
     }
 
     private boolean isValidCluster(Cluster cluster, LinkedList<Cluster> clusters) {
@@ -246,7 +240,7 @@ public class HierarchicalClustering {
 
     public void displayAllPartitions(LinkedList<Cluster> listOfPartitions) {
         listOfPartitions.forEach(partition -> {
-            System.out.println("\n partition : ");
+            System.out.println("Partition");
             partition.displayP();
         });
         System.out.println("Nombre de partitions : " + listOfPartitions.size());

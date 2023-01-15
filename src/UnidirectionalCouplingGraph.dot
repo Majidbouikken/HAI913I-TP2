@@ -1,3 +1,0 @@
-digraph G {
-"loggers.ErrorLogger" -> "loggers.LogRequest" [ label = "0.005 "] "spoon.SpoonCouplingGraph" -> "spoon.SpoonCouplingMetric" [ label = "0.014 "] "loggers.ConsoleLogger" -> "loggers.LogRequest" [ label = "0.005 "] "loggers.FileLogger" -> "loggers.LogRequest" [ label = "0.009 "] "spoon.HierarchicalClusteringSpoon" -> "spoon.SpoonCouplingGraph" [ label = "0.018 "] "identificationModule.HierarchicalClustering" -> "identificationModule.CoupleOfClasses" [ label = "0.023 "] "identificationModule.HierarchicalClustering" -> "identificationModule.Cluster" [ label = "0.095 "] "graphs.CouplingGraph" -> "graphs.CallGraph2" [ label = "0.009 "] "loggers.Logger" -> "loggers.LogRequest" [ label = "0.005 "] 
-}

@@ -44,7 +44,7 @@ public class StaticCallGraph extends CallGraph {
 	}
 
 	// récupération du graph complet du projet
-	// cad toute les méthods et leurs invocation
+	// cad toutes les méthodes et leurs invocations
 	public static StaticCallGraph createCallGraph(String projectPath) throws IOException {
 		StaticCallGraph graph = new StaticCallGraph(projectPath);
 

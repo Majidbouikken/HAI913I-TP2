@@ -79,19 +79,17 @@ public class MainApp {
         while (true) {
             System.out.println(
                     "******** TP2 : Compréhension des programmes *******");
-            System.out.println("1. Static call graph");
+            System.out.println("1. Générer un graphe d'appel statique");
             System.out.println("Exercice 1");
-            System.out.println("2. Calcul de la métrique de couplage entre deux classes A et B");
-            System.out.println("3. Générer un graphe de couplage pondéré entre les classes de l'application");
+            System.out.println("2. Mesurer la métrique de couplage entre deux classes");
+            System.out.println("3. Générer le graphe de couplage pondéré entre les classes de l'application");
             System.out.println("Exercice 2");
-            System.out.println("4. Générer le regroupement hiérarchique des classes");
-            System.out.println("5. Générer les groupes de classes couplés (partitions)");
+            System.out.println("4. Regrouper les classes de manière hiérarchique");
+            System.out.println("5. Afficher les groupes de classes liées (partitions)");
             System.out.println("Exercice 3 : utilisation de Spoon");
-            System.out.println("6. Calcul de la métrique de couplage entre deux classes A et B");
-            System.out.println("7. Générez un graphe de couplage pondéré entre les classes de l'application");
-            System.out.println("8. Générer le regroupement hiérarchique des classes");
-            System.out.println("9. Générer les groupes de classes couplés (partitions)");
-            System.out.println("0. Pour quitter");
+            System.out.println("6. Mesurer la métrique de couplage entre deux classes avec Spoon");
+            System.out.println("7. Générer un graphe de couplage pondéré entre les classes de l'application avec Spoon");
+            System.out.println("0. Quitter le programme");
             System.out.println("");
             System.out.print("Veuillez introduire votre choix : ");
             choice = sc.nextInt();
@@ -132,9 +130,9 @@ public class MainApp {
                     start = System.currentTimeMillis();
                     bidirectionalCouplingGraph = new BidirectionalCouplingGraph(callGraph2, couplingMetric);
                     bidirectionalCouplingGraph.generateBidirectionalCouplingGraph();
-                    Utility.saveGraph(MainApp.path + "BidirectionalCouplingGraph.dot",
+                    Utility.saveGraph(MainApp.path + "graph-de-couplage-bidirectionel.dot",
                             Utility.getBidirectionalGraphAsDot(bidirectionalCouplingGraph.getBidirectionalCouplings()));
-                    Utility.saveGraphAsPNG(MainApp.path + "BidirectionalCouplingGraph.png",
+                    Utility.saveGraphAsPNG(MainApp.path + "graph-de-couplage-bidirectionel.png",
                             Utility.getBidirectionalGraphAsDot(bidirectionalCouplingGraph.getBidirectionalCouplings()));
                     end = System.currentTimeMillis();
                     System.out
@@ -157,10 +155,10 @@ public class MainApp {
                                     + (end - start) + " Ms");
                     start = System.currentTimeMillis();
                     HierarchicalClustering hierarchicalClustering = new HierarchicalClustering();
-                    clusters = hierarchicalClustering.createClustersInitilised(callGraph2);
+                    clusters = hierarchicalClustering.createClustersInitialized(callGraph2);
                     couplesOfClasses = hierarchicalClustering.createListOfClassesCouple(bidirectionalCouplingGraph);
                     hierarchicalClustering.createHierarchicalClustering(clusters, couplesOfClasses);
-                    System.out.println(" \n \n ************** liste Final des clusters *************** \n \n");
+                    System.out.println("Liste final des Clusters :");
                     hierarchicalClustering.displayHierarchicalClustering(clusters);
                     end = System.currentTimeMillis();
                     System.out.println("Temps d'exécution de calcul des clusters avec ASTParser : " + (end - start) + " Ms");
@@ -182,10 +180,10 @@ public class MainApp {
                                     + (end - start) + " Ms");
                     start = System.currentTimeMillis();
                     HierarchicalClustering hierarchicalClustering = new HierarchicalClustering();
-                    clusters = hierarchicalClustering.createClustersInitilised(callGraph2);
+                    clusters = hierarchicalClustering.createClustersInitialized(callGraph2);
                     couplesOfClasses = hierarchicalClustering.createListOfClassesCouple(bidirectionalCouplingGraph);
                     partitions = hierarchicalClustering.createPartitions(clusters, couplesOfClasses);
-                    System.out.println(" \n \n ************** liste Final des partitions *************** \n \n");
+                    System.out.println("Liste des Partitions :");
                     hierarchicalClustering.displayAllPartitions(partitions);
                     end = System.currentTimeMillis();
                     System.out
@@ -217,9 +215,9 @@ public class MainApp {
                     System.out.println("Temps d'exécution de la generation du model par spoon est de " + (end - start) + "Ms");
                     start = System.currentTimeMillis();
                     spoonCouplingGraph.createUnidiractionalWeightedCouplingGraph();
-                    Utility.saveGraph(MainApp.path + "UnidirectionalCouplingGraphSpoon.dot",
+                    Utility.saveGraph(MainApp.path + "graph-de-couplage-unidirectionel-spoon.dot",
                             Utility.getGraphAsDot(spoonCouplingGraph.getUnidirectionalWeightedCouplingGraph()));
-                    Utility.saveGraphAsPNG(MainApp.path + "UnidirectionalCouplingGraphSpoon.png",
+                    Utility.saveGraphAsPNG(MainApp.path + "graph-de-couplage-unidirectionel-spoon.png",
                             Utility.getGraphAsDot(spoonCouplingGraph.getUnidirectionalWeightedCouplingGraph()));
                     end = System.currentTimeMillis();
                     System.out.println("Temps d'exécution de la generation du graph unidirectionnel avec spoon : "
@@ -227,57 +225,13 @@ public class MainApp {
 
                     start = System.currentTimeMillis();
                     spoonCouplingGraph.createBidirectionalWeightedCouplingGraph();
-                    Utility.saveGraph(MainApp.path + "BidirectionalGraphCouplingGraphSpoon.dot",
+                    Utility.saveGraph(MainApp.path + "graph-de-couplage-bidirectionel-spoon.dot",
                             Utility.getBidirectionalGraphAsDot(spoonCouplingGraph.getBidirectionalWeightedCouplingGraph()));
-                    Utility.saveGraphAsPNG(MainApp.path + "BidirectionalGraphCouplingSpoon.png",
+                    Utility.saveGraphAsPNG(MainApp.path + "graph-de-couplage-bidirectionel-spoon.png",
                             Utility.getBidirectionalGraphAsDot(spoonCouplingGraph.getBidirectionalWeightedCouplingGraph()));
                     end = System.currentTimeMillis();
                     System.out.println("Temps d'exécution de la generation du graph bidirectionnel avec spoon : "
-                            + (end - start) + " Ms");
-                }
-                case 8 -> {
-                    start = System.currentTimeMillis();
-                    spoonParser = new SpoonParser(MainApp.path);
-                    spoonCouplingGraph = new SpoonCouplingGraph(spoonParser.getModel());
-                    end = System.currentTimeMillis();
-                    System.out.println("Temps d'exécution de la generation du model par spoon : " + (end - start) + " Ms");
-                    start = System.currentTimeMillis();
-                    spoonCouplingGraph.createBidirectionalWeightedCouplingGraph();
-                    end = System.currentTimeMillis();
-                    System.out.println("Temps d'exécution de la generation du graph bidirectionnel avec spoon : "
-                            + (end - start) + " Ms");
-                    start = System.currentTimeMillis();
-                    hierarchicalClusteringSpoon = new HierarchicalClusteringSpoon(spoonParser.getModel());
-                    clusters = hierarchicalClusteringSpoon.createClustersInitialized();
-                    couplesOfClasses = hierarchicalClusteringSpoon.createListOfClassesCouple(spoonCouplingGraph);
-                    hierarchicalClusteringSpoon.createHierarchicalClustering(clusters, couplesOfClasses);
-                    System.out.println(" \n \n ************** liste Final des clusters *************** \n \n");
-                    hierarchicalClusteringSpoon.displayHierarchicalClustering(clusters);
-
-                    end = System.currentTimeMillis();
-                    System.out.println("Temps d'exécution de la generation du clustering hierarchique par spoon : "
-                            + (end - start) + " Ms");
-                }
-                case 9 -> {
-                    start = System.currentTimeMillis();
-                    spoonParser = new SpoonParser(MainApp.path);
-                    spoonCouplingGraph = new SpoonCouplingGraph(spoonParser.getModel());
-                    end = System.currentTimeMillis();
-                    System.out.println("Temps d'exécution de la generation du model par spoon : " + (end - start) + " Ms");
-                    start = System.currentTimeMillis();
-                    spoonCouplingGraph.createBidirectionalWeightedCouplingGraph();
-                    end = System.currentTimeMillis();
-                    System.out.println("Temps d'exécution de la generation du graph bidirectionnel avec spoon : "
-                            + (end - start) + " Ms");
-                    start = System.currentTimeMillis();
-                    hierarchicalClusteringSpoon = new HierarchicalClusteringSpoon(spoonParser.getModel());
-                    clusters = hierarchicalClusteringSpoon.createClustersInitialized();
-                    couplesOfClasses = hierarchicalClusteringSpoon.createListOfClassesCouple(spoonCouplingGraph);
-                    partitions = hierarchicalClusteringSpoon.creatPartitions(clusters, couplesOfClasses);
-                    hierarchicalClusteringSpoon.displayAllPartitions(partitions);
-                    end = System.currentTimeMillis();
-                    System.out.println(
-                            "Temps d'exécution de la generation du partitionnement par spoon : " + (end - start) + " Ms");
+                            + (end - start) + "Ms");
                 }
                 case 0 -> {
                     System.out.println("Au revoir ! ");
