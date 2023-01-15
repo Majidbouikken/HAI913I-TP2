@@ -1,0 +1,670 @@
+Static Call Graph
+Methods: 352.
+Invocations: 671.
+spoon.HierarchicalClusteringSpoon::createHierarchicalClustering:
+	---> java.util.LinkedList<spoon.Cluster>::size (3 time(s))
+	---> java.util.LinkedList<spoon.Cluster>::remove (2 time(s))
+	---> cluster::display (2 time(s))
+	---> spoon.HierarchicalClusteringSpoon::getScoreBetweenClusters (1 time(s))
+	---> java.util.LinkedList<spoon.Cluster>::add (1 time(s))
+	---> partA.getClasses()::forEach (1 time(s))
+	---> java.io.PrintStream::println (7 time(s))
+	---> i::getAndIncrement (1 time(s))
+	---> java.util.LinkedList<spoon.Cluster>::get (4 time(s))
+	---> spoon.Cluster::addClasses (1 time(s))
+	---> java.util.LinkedList<spoon.Cluster>::forEach (2 time(s))
+	---> spoon.Cluster::getClasses (4 time(s))
+	---> partB.getClasses()::forEach (1 time(s))
+	---> classe::toString (2 time(s))
+	---> System.out::println (3 time(s))
+
+graphs.CallGraph2::addInvocations:
+	---> map.get(source)::keySet (1 time(s))
+	---> graphs.CallGraph2::addInvocation (1 time(s))
+	---> map.get(source)::get (1 time(s))
+	---> java.util.Map<graphs.MethodDeclaration,java.util.Map<graphs.MethodInvocation,java.lang.Integer>>::keySet (1 time(s))
+	---> java.util.Map<graphs.MethodDeclaration,java.util.Map<graphs.MethodInvocation,java.lang.Integer>>::get (2 time(s))
+
+spoon.SpoonCouplingGraph::isClassesNotTreated:
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::get (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::containsKey (2 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Double>::containsKey (1 time(s))
+
+identificationModule.HierarchicalClustering::isValidCluster:
+	---> identificationModule.Cluster::hasSameClasses (1 time(s))
+
+metrics.CouplingMetric::getNbRelationsBetweenAB:
+	---> metrics.Expression::resolveTypeBinding (1 time(s))
+	---> Utility.getClassFullyQualifiedName(t).toString()::equals (1 time(s))
+	---> metrics.ITypeBinding::getQualifiedName (2 time(s))
+	---> Utility::getClassFullyQualifiedName (1 time(s))
+	---> metrics.IMethodBinding::getDeclaringClass (1 time(s))
+	---> metrics.MethodInvocation::getExpression (1 time(s))
+	---> java.util.Map<metrics.MethodInvocation,java.lang.Integer>::keySet (1 time(s))
+	---> Utility.getClassFullyQualifiedName(t)::toString (1 time(s))
+	---> graph.getInvocations()::keySet (1 time(s))
+	---> metrics.MethodInvocation::resolveMethodBinding (1 time(s))
+	---> metrics.MethodDeclaration::getParent (1 time(s))
+	---> metrics.CallGraph2::getInvocations (2 time(s))
+	---> java.lang.String::equals (1 time(s))
+	---> graph.getInvocations()::get (1 time(s))
+
+spoon.HierarchicalClusteringSpoon::getScoreBetweenClusters:
+	---> spoon.CoupleOfClasses::getClassNameA (1 time(s))
+	---> spoon.Cluster::getClasses (2 time(s))
+	---> spoon.CoupleOfClasses::getClassNameB (1 time(s))
+	---> spoon.CoupleOfClasses::getCouplageMetricValue (1 time(s))
+	---> java.lang.String::equals (1 time(s))
+	---> couple.getClassNameB()::equals (1 time(s))
+	---> couple.getClassNameA()::equals (1 time(s))
+
+graphs.CallGraph::log:
+	---> parser::getProjectPath (1 time(s))
+	---> graphs.FileLogger::log (1 time(s))
+	---> graphs.FileLogger::setFilePath (1 time(s))
+	---> graphs.CallGraph::toString (1 time(s))
+
+parsers.Parser::listJavaFiles:
+	---> java.io.File::listFiles (1 time(s))
+	---> java.io.File::getName (1 time(s))
+	---> java.util.List<java.io.File>::add (1 time(s))
+	---> parsers.Parser::listJavaFiles (1 time(s))
+	---> java.io.File::getAbsolutePath (1 time(s))
+	---> java.lang.String::endsWith (1 time(s))
+	---> java.io.File::isDirectory (1 time(s))
+	---> java.util.List<java.io.File>::addAll (1 time(s))
+
+spoon.SpoonCouplingMetric::getNbRelationsBetweenAB:
+	---> spoon.CtModel::getAllTypes (1 time(s))
+	---> spoon.CtType::getQualifiedName (1 time(s))
+	---> spoon.CtInvocation::getTarget (2 time(s))
+	---> methodInvocation.getTarget().getType()::getTypeDeclaration (1 time(s))
+	---> methodInvocation.getTarget().getType().getTypeDeclaration()::getQualifiedName (1 time(s))
+	---> java.lang.String::equals (3 time(s))
+	---> Query::getElements (1 time(s))
+	---> methodInvocation.getTarget()::getType (2 time(s))
+	---> spoon.CtType::getAllMethods (1 time(s))
+
+spoon.HierarchicalClusteringSpoon::getUseLessPartitions:
+	---> spoon.Cluster::getClasses (1 time(s))
+	---> java.util.LinkedList<spoon.Cluster>::add (1 time(s))
+	---> java.util.Stack<spoon.Cluster>::size (1 time(s))
+	---> stackOfCluster.get(i).getClasses()::contains (1 time(s))
+	---> stackOfCluster.get(i)::getClasses (1 time(s))
+	---> java.util.Stack<spoon.Cluster>::get (1 time(s))
+
+spoon.HierarchicalClusteringSpoon::displayAllPartitions:
+	---> java.util.LinkedList<spoon.Cluster>::forEach (1 time(s))
+	---> partition::displayP (1 time(s))
+	---> java.util.LinkedList<spoon.Cluster>::size (1 time(s))
+	---> System.out::println (1 time(s))
+	---> java.io.PrintStream::println (1 time(s))
+
+identificationModule.HierarchicalClustering::displayAllPartitions:
+	---> partition::displayP (1 time(s))
+	---> java.util.LinkedList<identificationModule.Cluster>::forEach (1 time(s))
+	---> System.out::println (1 time(s))
+	---> java.io.PrintStream::println (1 time(s))
+	---> java.util.LinkedList<identificationModule.Cluster>::size (1 time(s))
+
+MainApp::main:
+	---> MainApp::Menu (1 time(s))
+	---> java.io.IOException::printStackTrace (1 time(s))
+	---> java.lang.String::equals (1 time(s))
+	---> java.io.PrintStream::println (1 time(s))
+
+parsers.Parser::Parser:
+	---> parsers.Parser::configure (1 time(s))
+	---> parsers.Parser::setProjectPath (1 time(s))
+	---> parsers.Parser::setJREPath (1 time(s))
+	---> java.lang.System::getProperty (1 time(s))
+
+loggers.ErrorLogger::write:
+	---> loggers.LogRequest::getMessage (1 time(s))
+	---> java.io.PrintStream::println (1 time(s))
+
+graphs.BidirectionalCouplingGraph::generateBidirectionalCouplingGraph:
+	---> java.util.Map<java.lang.String,java.lang.Double>::put (1 time(s))
+	---> couplings::keySet (1 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Double>::keySet (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::get (2 time(s))
+	---> couplingMetric::getCouplingMetricBetweenAB (2 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::containsKey (3 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::put (1 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Double>::containsKey (1 time(s))
+	---> couplings::get (1 time(s))
+	---> graphs.BidirectionalCouplingGraph::generateCouplingGraph (1 time(s))
+
+graphs.CallGraph2::addInvocation:
+	---> java.util.Map<graphs.MethodDeclaration,java.util.Map<graphs.MethodInvocation,java.lang.Integer>>::containsKey (2 time(s))
+	---> invocations.get(source)::containsKey (1 time(s))
+	---> java.util.Map<graphs.MethodDeclaration,java.util.Map<graphs.MethodInvocation,java.lang.Integer>>::put (2 time(s))
+	---> invocations.get(source)::get (1 time(s))
+	---> java.util.Map<graphs.MethodDeclaration,java.util.Map<graphs.MethodInvocation,java.lang.Integer>>::get (6 time(s))
+	---> java.util.Set<graphs.MethodDeclaration>::add (2 time(s))
+	---> invocations.get(source)::put (4 time(s))
+
+spoon.SpoonCouplingMetric::getTotalNumberOfCalls:
+	---> spoon.CtModel::getAllTypes (1 time(s))
+	---> type.getQualifiedName()::equals (1 time(s))
+	---> spoon.CtType::getQualifiedName (1 time(s))
+	---> spoon.CtInvocation::getTarget (2 time(s))
+	---> methodInvocation.getTarget().getType()::getTypeDeclaration (1 time(s))
+	---> methodInvocation.getTarget().getType().getTypeDeclaration()::getQualifiedName (1 time(s))
+	---> Query::getElements (1 time(s))
+	---> methodInvocation.getTarget()::getType (2 time(s))
+	---> spoon.CtType::getAllMethods (1 time(s))
+
+spoon.HierarchicalClusteringSpoon::creatPartitions:
+	---> java.util.LinkedList<spoon.Cluster>::forEach (1 time(s))
+	---> spoon.HierarchicalClusteringSpoon::isValidCluster (1 time(s))
+	---> java.util.Stack<spoon.Cluster>::pop (3 time(s))
+	---> java.util.LinkedList<spoon.Cluster>::add (2 time(s))
+	---> spoon.HierarchicalClusteringSpoon::createHierarchicalClusteringForPartition (1 time(s))
+	---> java.io.PrintStream::println (6 time(s))
+	---> java.util.Stack<spoon.Cluster>::isEmpty (1 time(s))
+	---> spoon.Cluster::getMetricCouplingValue (4 time(s))
+	---> partition::display (1 time(s))
+
+utility.Utility::getBidirectionalGraphAsDot:
+	---> java.lang.StringBuilder::append (12 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::keySet (1 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Double>::keySet (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::get (2 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Double>::get (1 time(s))
+	---> java.lang.StringBuilder::toString (1 time(s))
+
+loggers.Logger::log:
+	---> loggers.LogRequest::getLevel (1 time(s))
+	---> loggers.ILogger::log (1 time(s))
+	---> loggers.Logger::write (1 time(s))
+	---> request.getLevel()::value (1 time(s))
+	---> loggers.LogRequestLevel::value (1 time(s))
+
+graphs.CallGraph2::toString:
+	---> graphs.MethodDeclaration::getName (1 time(s))
+	---> source.getName()::toString (1 time(s))
+	---> java.lang.StringBuilder::append (7 time(s))
+	---> invocations.get(source)::keySet (1 time(s))
+	---> graphs.MethodInvocation::getName (1 time(s))
+	---> invocations.get(source)::get (1 time(s))
+	---> java.util.Map<graphs.MethodDeclaration,java.util.Map<graphs.MethodInvocation,java.lang.Integer>>::keySet (1 time(s))
+	---> graphs.CallGraph2::getNbInvocations (1 time(s))
+	---> java.util.Map<graphs.MethodDeclaration,java.util.Map<graphs.MethodInvocation,java.lang.Integer>>::get (2 time(s))
+	---> destination.getName()::toString (1 time(s))
+	---> java.lang.StringBuilder::toString (1 time(s))
+	---> java.util.Set<graphs.MethodDeclaration>::size (1 time(s))
+
+identificationModule.HierarchicalClustering::createHierarchicalClustering:
+	---> cluster::display (2 time(s))
+	---> identificationModule.HierarchicalClustering::getScoreBetweenClusters (1 time(s))
+	---> java.util.LinkedList<identificationModule.Cluster>::remove (2 time(s))
+	---> partA.getClasses()::forEach (1 time(s))
+	---> java.util.LinkedList<identificationModule.Cluster>::forEach (2 time(s))
+	---> java.io.PrintStream::println (7 time(s))
+	---> identificationModule.Cluster::getClasses (4 time(s))
+	---> partB.getClasses()::forEach (1 time(s))
+	---> java.util.LinkedList<identificationModule.Cluster>::get (4 time(s))
+	---> classe::toString (2 time(s))
+	---> identificationModule.Cluster::addClasses (1 time(s))
+	---> System.out::println (3 time(s))
+	---> java.util.LinkedList<identificationModule.Cluster>::add (1 time(s))
+	---> java.util.LinkedList<identificationModule.Cluster>::size (3 time(s))
+
+graphs.CouplingGraph::generateCouplingGraph:
+	---> java.util.Map<java.lang.String,java.lang.Double>::put (1 time(s))
+	---> Utility::getClassFullyQualifiedName (2 time(s))
+	---> graphs.CallGraph2::getClasses (2 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::get (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::containsKey (1 time(s))
+	---> java.lang.String::equals (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::put (1 time(s))
+	---> graphs.CouplingMetric::getCouplingMetricBetweenAB (1 time(s))
+
+graphs.CallGraph::toString:
+	---> java.util.Map<java.lang.String,java.lang.Integer>::get (1 time(s))
+	---> graphs.CallGraph::getNbInvocations (1 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Integer>::keySet (1 time(s))
+	---> java.lang.StringBuilder::append (7 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Integer>>::keySet (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Integer>>::get (2 time(s))
+	---> java.lang.StringBuilder::toString (1 time(s))
+	---> java.util.Set<java.lang.String>::size (1 time(s))
+
+utility.Utility::round:
+	---> java.math.BigDecimal::setScale (1 time(s))
+	---> java.math.BigDecimal::doubleValue (1 time(s))
+	---> java.lang.Double::toString (1 time(s))
+
+graphs.StaticCallGraph2::createCallGraph:
+	---> graphs.MethodDeclarationsCollector::getMethods (1 time(s))
+	---> graphs.StaticCallGraph2::createCallGraph (1 time(s))
+	---> graphs.StaticCallGraph2::getClasses (1 time(s))
+	---> graphs.StaticCallGraph2::addClasses (1 time(s))
+	---> graphs.StaticCallGraph2::getInvocations (1 time(s))
+	---> graphs.StaticCallGraph2::addMethodAndInvocations (1 time(s))
+	---> graphs.StaticCallGraph2::addMethods (1 time(s))
+	---> graphs.StaticCallGraph2::getMethods (1 time(s))
+	---> graphs.StaticCallGraph2::addInvocations (1 time(s))
+	---> graphs.TypeDeclaration::accept (1 time(s))
+	---> graphs.ClassDeclarationsCollector::getClasses (1 time(s))
+	---> graphs.StaticCallGraph2::addClass (1 time(s))
+	---> graphs.CompilationUnit::accept (1 time(s))
+	---> graph.parser::parseProject (1 time(s))
+
+parsers.EclipseJDTASTParser::setParser:
+	---> parsers.EclipseJDTASTParser::getJREPath (1 time(s))
+	---> parser::setCompilerOptions (1 time(s))
+	---> JavaCore::getOptions (1 time(s))
+	---> ASTParser::newParser (1 time(s))
+	---> parser::setEnvironment (1 time(s))
+	---> parsers.EclipseJDTASTParser::getProjectPath (1 time(s))
+	---> parser::setBindingsRecovery (1 time(s))
+	---> parser::setKind (1 time(s))
+	---> parser::setUnitName (1 time(s))
+	---> parser::setResolveBindings (1 time(s))
+
+graphs.StaticCallGraph::getMethodInvocationName:
+	---> Utility::getClassFullyQualifiedName (1 time(s))
+	---> graphs.MethodInvocation::getName (3 time(s))
+	---> graphs.Expression::resolveTypeBinding (1 time(s))
+	---> graphs.MethodInvocation::getExpression (1 time(s))
+	---> invocation.getName()::toString (3 time(s))
+	---> graphs.ITypeBinding::getQualifiedName (1 time(s))
+
+graphs.StaticCallGraph2::addMethodAndInvocations:
+	---> Utility::getMethodFullyQualifiedName (1 time(s))
+	---> graphs.MethodDeclaration::getBody (2 time(s))
+	---> graphs.StaticCallGraph2::addInvocations (1 time(s))
+	---> graphs.StaticCallGraph2::addMethod (1 time(s))
+
+graphs.CallGraph::addMethods:
+	---> java.util.Set<java.lang.String>::addAll (1 time(s))
+
+processors.Processor::Processor:
+	---> processors.Processor::setParser (1 time(s))
+
+spoon.HierarchicalClusteringSpoon::createClustersInitialized:
+	---> spoon.HierarchicalClusteringSpoon::isClassExistOnCluster (1 time(s))
+	---> spoon.HierarchicalClusteringSpoon::createClusterInitialized (1 time(s))
+	---> spoon.CtModel::getAllTypes (1 time(s))
+	---> spoon.CtType::getQualifiedName (2 time(s))
+	---> java.util.LinkedList<spoon.Cluster>::add (1 time(s))
+
+graphs.StaticCallGraph::addMethodAndInvocations:
+	---> Utility::getMethodFullyQualifiedName (1 time(s))
+	---> graphs.MethodDeclaration::getBody (2 time(s))
+	---> graphs.StaticCallGraph::addMethod (1 time(s))
+	---> graphs.StaticCallGraph::addInvocations (1 time(s))
+	---> graphs.StaticCallGraph::addSuperInvocations (1 time(s))
+
+identificationModule.HierarchicalClustering::isClassExistOnCluster:
+	---> cluster.getClasses()::contains (1 time(s))
+	---> identificationModule.Cluster::getClasses (1 time(s))
+
+spoon.HierarchicalClusteringSpoon::isValidCluster:
+	---> spoon.Cluster::hasSameClasses (1 time(s))
+
+spoon.SpoonCouplingGraph::createBidirectionalWeightedCouplingGraph:
+	---> spoon.SpoonCouplingMetric::getCouplingMetricBetweenAB (2 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Double>::put (1 time(s))
+	---> spoon.SpoonCouplingGraph::isClassesNotTreated (2 time(s))
+	---> spoon.CtModel::getAllTypes (2 time(s))
+	---> spoon.CtType::getQualifiedName (2 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::get (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::containsKey (1 time(s))
+	---> java.lang.String::equals (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::put (1 time(s))
+
+spoon.SpoonCouplingMetric::getCouplingMetricBetweenAB:
+	---> spoon.SpoonCouplingMetric::getTotalNumberOfCalls (1 time(s))
+	---> spoon.SpoonCouplingMetric::getNbRelationsBetweenAB (1 time(s))
+	---> Utility::round (1 time(s))
+
+spoon.SpoonParser::getModel:
+	---> spoon.Launcher::addInputResource (1 time(s))
+	---> spoon.Launcher::buildModel (1 time(s))
+	---> spoon.Launcher::getModel (1 time(s))
+
+graphs.CallGraph::CallGraph:
+	---> graphs.CallGraph::setLoggerChain (1 time(s))
+
+identificationModule.Cluster::displayP:
+	---> java.io.PrintStream::println (1 time(s))
+
+graphs.CallGraph2::addClass:
+	---> java.util.Set<graphs.TypeDeclaration>::add (1 time(s))
+
+identificationModule.HierarchicalClustering::createListOfClassesCouple:
+	---> java.util.LinkedList<identificationModule.CoupleOfClasses>::add (1 time(s))
+	---> bidirectionalCouplingGraph.getBidirectionalCouplings()::get (1 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Double>::keySet (1 time(s))
+	---> identificationModule.BidirectionalCouplingGraph::getBidirectionalCouplings (2 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Double>::get (1 time(s))
+	---> bidirectionalCouplingGraph.getBidirectionalCouplings()::keySet (1 time(s))
+
+visitors.MethodInvocationsCollector::visit:
+	---> java.util.List<visitors.SuperMethodInvocation>::add (1 time(s))
+	---> visit (2 time(s))
+	---> java.util.List<visitors.MethodInvocation>::add (1 time(s))
+
+utility.Utility::saveGraphAsPNG:
+	---> g.graphAttrs().add(Color.WHITE.gradient(Color.rgb("888888")).background().angle(90)).nodeAttrs().add(Color.WHITE.fill()).nodes()::forEach (1 time(s))
+	---> g.graphAttrs().add(Color.WHITE.gradient(Color.rgb("888888")).background().angle(90))::nodeAttrs (1 time(s))
+	---> node::add (1 time(s))
+	---> utility.MutableGraph::graphAttrs (1 time(s))
+	---> Color.WHITE::fill (1 time(s))
+	---> Color.WHITE::gradient (1 time(s))
+	---> Color::named (1 time(s))
+	---> Color::rgb (1 time(s))
+	---> Graphviz.fromGraph(g).height(1920)::render (1 time(s))
+	---> Color.WHITE.gradient(Color.rgb("888888"))::background (1 time(s))
+	---> node::name (1 time(s))
+	---> Graphviz::fromGraph (1 time(s))
+	---> g.graphAttrs().add(Color.WHITE.gradient(Color.rgb("888888")).background().angle(90)).nodeAttrs()::add (1 time(s))
+	---> Color.WHITE.gradient(Color.rgb("888888")).background()::angle (1 time(s))
+	---> node.name()::toString (1 time(s))
+	---> utility.Parser::read (1 time(s))
+	---> Graphviz.fromGraph(g)::height (1 time(s))
+	---> Style::lineWidth (1 time(s))
+	---> g.graphAttrs().add(Color.WHITE.gradient(Color.rgb("888888")).background().angle(90)).nodeAttrs().add(Color.WHITE.fill())::nodes (1 time(s))
+	---> g.graphAttrs()::add (1 time(s))
+	---> Graphviz.fromGraph(g).height(1920).render(Format.PNG)::toFile (1 time(s))
+
+graphs.CallGraph::getNbInvocations:
+	---> java.util.Set::stream (1 time(s))
+	---> java.util.stream.Stream::flatMap (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Integer>>::keySet (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Integer>>::get (1 time(s))
+	---> java.util.stream.Stream::map (2 time(s))
+	---> invocations.keySet().stream().map(source -> invocations.get(source)).map(destination -> destination.values()).flatMap(Collection::stream).flatMapToLong(value -> LongStream.of((long)value))::sum (1 time(s))
+	---> java.lang.Object::values (1 time(s))
+	---> invocations.keySet().stream().map(source -> invocations.get(source)).map(destination -> destination.values()).flatMap(Collection::stream)::flatMapToLong (1 time(s))
+	---> LongStream::of (1 time(s))
+
+graphs.StaticCallGraph::createCallGraph:
+	---> graphs.StaticCallGraph::getMethods (1 time(s))
+	---> graphs.StaticCallGraph::getInvocations (1 time(s))
+	---> graphs.MethodDeclarationsCollector::getMethods (1 time(s))
+	---> graphs.StaticCallGraph::createCallGraph (1 time(s))
+	---> graphs.CompilationUnit::accept (1 time(s))
+	---> graph.parser::parseProject (1 time(s))
+	---> graphs.TypeDeclaration::accept (1 time(s))
+	---> graphs.StaticCallGraph::addMethodAndInvocations (1 time(s))
+	---> graphs.ClassDeclarationsCollector::getClasses (1 time(s))
+	---> graphs.StaticCallGraph::addInvocations (1 time(s))
+	---> graphs.StaticCallGraph::addMethods (1 time(s))
+
+metrics.CouplingMetric::getTotalNbRelations:
+	---> metrics.ITypeBinding::getQualifiedName (1 time(s))
+	---> graph.getInvocations()::keySet (1 time(s))
+	---> metrics.MethodInvocation::resolveMethodBinding (1 time(s))
+	---> Utility::getClassFullyQualifiedName (1 time(s))
+	---> metrics.MethodDeclaration::getParent (1 time(s))
+	---> metrics.IMethodBinding::getDeclaringClass (1 time(s))
+	---> metrics.CallGraph2::getInvocations (2 time(s))
+	---> java.lang.String::equals (1 time(s))
+	---> java.util.Map<metrics.MethodInvocation,java.lang.Integer>::get (1 time(s))
+	---> java.util.Map<metrics.MethodInvocation,java.lang.Integer>::keySet (1 time(s))
+	---> graph.getInvocations()::get (1 time(s))
+
+graphs.CallGraph::addInvocation:
+	---> java.util.Map<java.lang.String,java.lang.Integer>::get (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Integer>>::put (2 time(s))
+	---> java.util.Set<java.lang.String>::add (5 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Integer>>::get (6 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Integer>>::containsKey (2 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Integer>::containsKey (1 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Integer>::put (4 time(s))
+
+identificationModule.HierarchicalClustering::getScoreBetweenClusters:
+	---> identificationModule.Cluster::getClasses (2 time(s))
+	---> identificationModule.CoupleOfClasses::getClassNameB (1 time(s))
+	---> identificationModule.CoupleOfClasses::getClassNameA (1 time(s))
+	---> java.lang.String::equals (1 time(s))
+	---> couple.getClassNameB()::equals (1 time(s))
+	---> identificationModule.CoupleOfClasses::getCouplageMetricValue (1 time(s))
+	---> couple.getClassNameA()::equals (1 time(s))
+
+identificationModule.HierarchicalClustering::displayHierarchicalClustering:
+	---> identificationModule.Cluster::display (1 time(s))
+	---> java.io.PrintStream::println (2 time(s))
+
+utility.Utility::saveGraph:
+	---> java.io.PrintWriter::close (1 time(s))
+	---> java.io.IOException::printStackTrace (1 time(s))
+	---> java.io.PrintStream::println (1 time(s))
+	---> java.io.PrintWriter::println (1 time(s))
+	---> java.io.FileWriter::close (1 time(s))
+	---> java.io.BufferedWriter::close (1 time(s))
+
+parsers.EclipseJDTASTParser::parse:
+	---> parser::setSource (1 time(s))
+	---> FileUtils.readFileToString(sourceFile,platformCharset)::toCharArray (1 time(s))
+	---> FileUtils::readFileToString (1 time(s))
+	---> parser::createAST (1 time(s))
+
+parsers.Parser::listJavaProjectFiles:
+	---> parsers.Parser::listJavaFiles (1 time(s))
+	---> parsers.Parser::getProjectPath (1 time(s))
+
+graphs.CallGraph::setLoggerChain:
+	---> graphs.FileLogger::setNextLogger (1 time(s))
+
+identificationModule.HierarchicalClustering::createPartitions:
+	---> identificationModule.HierarchicalClustering::createHierarchicalClusteringForPartition (1 time(s))
+	---> identificationModule.HierarchicalClustering::isValidCluster (1 time(s))
+	---> java.util.Stack<identificationModule.Cluster>::isEmpty (1 time(s))
+	---> java.util.Stack<identificationModule.Cluster>::pop (3 time(s))
+	---> identificationModule.Cluster::getMetricCouplingValue (4 time(s))
+	---> java.util.LinkedList<identificationModule.Cluster>::forEach (1 time(s))
+	---> java.io.PrintStream::println (6 time(s))
+	---> java.util.LinkedList<identificationModule.Cluster>::add (2 time(s))
+
+utility.Utility::getClassFullyQualifiedName:
+	---> utility.CompilationUnit::getPackage (2 time(s))
+	---> utility.TypeDeclaration::getName (1 time(s))
+	---> typeDeclaration.getRoot()::getClass (1 time(s))
+	---> root.getPackage().getName()::getFullyQualifiedName (1 time(s))
+	---> root.getPackage()::getName (1 time(s))
+	---> typeDeclaration.getName()::getIdentifier (1 time(s))
+	---> utility.TypeDeclaration::getRoot (2 time(s))
+
+graphs.CallGraph::addMethod:
+	---> java.util.Set<java.lang.String>::add (1 time(s))
+
+spoon.HierarchicalClusteringSpoon::displayHierarchicalClustering:
+	---> java.io.PrintStream::println (2 time(s))
+	---> spoon.Cluster::display (1 time(s))
+
+utility.Utility::getGraphAsDot:
+	---> java.lang.StringBuilder::append (11 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::keySet (1 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Double>::keySet (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::get (2 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Double>::get (1 time(s))
+	---> java.lang.StringBuilder::toString (1 time(s))
+
+graphs.CallGraph2::getNbMethods:
+	---> java.util.Set<graphs.MethodDeclaration>::size (1 time(s))
+
+graphs.CallGraph::getNbMethods:
+	---> java.util.Set<java.lang.String>::size (1 time(s))
+
+identificationModule.HierarchicalClustering::createHierarchicalClusteringForPartition:
+	---> java.util.Stack<identificationModule.Cluster>::push (3 time(s))
+	---> identificationModule.Cluster::getClasses (2 time(s))
+	---> identificationModule.HierarchicalClustering::getScoreBetweenClusters (1 time(s))
+	---> java.util.LinkedList<identificationModule.Cluster>::get (4 time(s))
+	---> java.util.LinkedList<identificationModule.Cluster>::remove (2 time(s))
+	---> identificationModule.Cluster::addClasses (1 time(s))
+	---> java.util.LinkedList<identificationModule.Cluster>::forEach (1 time(s))
+	---> java.io.PrintStream::println (2 time(s))
+	---> java.util.LinkedList<identificationModule.Cluster>::add (1 time(s))
+	---> java.util.LinkedList<identificationModule.Cluster>::size (3 time(s))
+
+graphs.CouplingGraph::displayCouplings:
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::keySet (1 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Double>::keySet (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::get (2 time(s))
+	---> java.io.PrintStream::println (1 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Double>::get (1 time(s))
+
+spoon.HierarchicalClusteringSpoon::isClassExistOnCluster:
+	---> cluster.getClasses()::contains (1 time(s))
+	---> spoon.Cluster::getClasses (1 time(s))
+
+graphs.CallGraph2::addMethods:
+	---> java.util.Set<graphs.MethodDeclaration>::addAll (1 time(s))
+
+graphs.CallGraph::addInvocations:
+	---> java.util.Map<java.lang.String,java.lang.Integer>::get (1 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Integer>::keySet (1 time(s))
+	---> graphs.CallGraph::addInvocation (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Integer>>::keySet (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Integer>>::get (2 time(s))
+
+graphs.CallGraph2::addMethod:
+	---> java.util.Set<graphs.MethodDeclaration>::add (1 time(s))
+
+spoon.HierarchicalClusteringSpoon::createHierarchicalClusteringForPartition:
+	---> java.util.LinkedList<spoon.Cluster>::forEach (1 time(s))
+	---> java.util.LinkedList<spoon.Cluster>::size (3 time(s))
+	---> java.util.LinkedList<spoon.Cluster>::remove (2 time(s))
+	---> spoon.Cluster::getClasses (2 time(s))
+	---> cluster::display (1 time(s))
+	---> java.util.Stack<spoon.Cluster>::push (3 time(s))
+	---> spoon.HierarchicalClusteringSpoon::getScoreBetweenClusters (1 time(s))
+	---> java.util.LinkedList<spoon.Cluster>::add (1 time(s))
+	---> java.io.PrintStream::println (2 time(s))
+	---> java.util.LinkedList<spoon.Cluster>::get (4 time(s))
+	---> spoon.Cluster::addClasses (1 time(s))
+
+graphs.CallGraph2::getNbInvocations:
+	---> destination::values (1 time(s))
+	---> invocations.keySet()::stream (1 time(s))
+	---> invocations::get (1 time(s))
+	---> java.util.Map<graphs.MethodDeclaration,java.util.Map<graphs.MethodInvocation,java.lang.Integer>>::keySet (1 time(s))
+	---> invocations.keySet().stream().map(source -> invocations.get(source))::map (1 time(s))
+	---> invocations.keySet().stream().map(source -> invocations.get(source)).map(destination -> destination.values()).flatMap(Collection::stream).flatMapToLong(value -> LongStream.of((long)value))::sum (1 time(s))
+	---> invocations.keySet().stream().map(source -> invocations.get(source)).map(destination -> destination.values()).flatMap(Collection::stream)::flatMapToLong (1 time(s))
+	---> LongStream::of (1 time(s))
+	---> invocations.keySet().stream().map(source -> invocations.get(source)).map(destination -> destination.values())::flatMap (1 time(s))
+	---> invocations.keySet().stream()::map (1 time(s))
+
+identificationModule.Cluster::display:
+	---> java.io.PrintStream::println (2 time(s))
+
+visitors.MethodDeclarationsCollector::visit:
+	---> java.util.List<visitors.MethodDeclaration>::add (1 time(s))
+
+identificationModule.Cluster::Cluster:
+	---> identificationModule.Cluster::getClasses (1 time(s))
+	---> java.util.Set<java.lang.String>::add (1 time(s))
+	---> identificationModule.Cluster::getMetricCouplingValue (1 time(s))
+
+spoon.HierarchicalClusteringSpoon::createListOfClassesCouple:
+	---> java.util.LinkedList<spoon.CoupleOfClasses>::add (1 time(s))
+	---> spoon.SpoonCouplingGraph::getBidirectionalWeightedCouplingGraph (2 time(s))
+	---> spoonCouplingGraph.getBidirectionalWeightedCouplingGraph()::get (1 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Double>::keySet (1 time(s))
+	---> spoonCouplingGraph.getBidirectionalWeightedCouplingGraph()::keySet (1 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Double>::get (1 time(s))
+
+visitors.MethodInvocationsCollector::isEmpty:
+	---> java.util.List<visitors.MethodInvocation>::isEmpty (1 time(s))
+	---> java.util.List<visitors.SuperMethodInvocation>::isEmpty (1 time(s))
+
+spoon.HierarchicalClusteringSpoon::createClusterInitialized:
+	---> java.util.Set<java.lang.String>::add (1 time(s))
+
+identificationModule.HierarchicalClustering::createClusterInitialized:
+	---> java.util.Set<java.lang.String>::add (1 time(s))
+
+graphs.StaticCallGraph2::addInvocations:
+	---> graphs.StaticCallGraph2::addInvocation (1 time(s))
+	---> graphs.MethodDeclaration::accept (1 time(s))
+	---> graphs.MethodInvocationsCollector::getMethodInvocations (1 time(s))
+
+identificationModule.HierarchicalClustering::createClustersInitialized:
+	---> identificationModule.HierarchicalClustering::isClassExistOnCluster (1 time(s))
+	---> Utility::getClassFullyQualifiedName (2 time(s))
+	---> identificationModule.HierarchicalClustering::createClusterInitialized (1 time(s))
+	---> identificationModule.CallGraph2::getClasses (1 time(s))
+	---> java.util.LinkedList<identificationModule.Cluster>::add (1 time(s))
+
+loggers.ConsoleLogger::write:
+	---> loggers.LogRequest::getMessage (1 time(s))
+	---> java.io.PrintStream::println (1 time(s))
+
+graphs.CallGraph2::addClasses:
+	---> java.util.Set<graphs.TypeDeclaration>::addAll (1 time(s))
+
+parsers.EclipseJDTASTParser::configure:
+	---> parsers.EclipseJDTASTParser::setParser (1 time(s))
+
+graphs.StaticCallGraph::addSuperInvocations:
+	---> graphs.MethodInvocationsCollector::getSuperMethodInvocations (1 time(s))
+	---> graphs.SuperMethodInvocation::getName (1 time(s))
+	---> graphs.StaticCallGraph::addMethod (1 time(s))
+	---> graphs.StaticCallGraph::addInvocation (1 time(s))
+	---> superInvocation.getName()::getFullyQualifiedName (1 time(s))
+
+metrics.CouplingMetric::getCouplingMetricBetweenAB:
+	---> metrics.CouplingMetric::getTotalNbRelations (1 time(s))
+	---> metrics.CouplingMetric::getNbRelationsBetweenAB (1 time(s))
+	---> Utility::round (1 time(s))
+
+visitors.ClassDeclarationsCollector::visit:
+	---> visitors.TypeDeclaration::isInterface (1 time(s))
+	---> java.util.List<visitors.TypeDeclaration>::add (1 time(s))
+
+loggers.FileLogger::write:
+	---> java.io.BufferedWriter::append (1 time(s))
+	---> loggers.LogRequest::getMessage (2 time(s))
+	---> java.io.IOException::printStackTrace (1 time(s))
+	---> java.io.PrintStream::println (1 time(s))
+
+parsers.EclipseJDTASTParser::parseProject:
+	---> parsers.EclipseJDTASTParser::listJavaProjectFiles (1 time(s))
+	---> parsers.EclipseJDTASTParser::parse (1 time(s))
+	---> java.util.List<parsers.CompilationUnit>::add (1 time(s))
+	---> parsers.EclipseJDTASTParser::configure (1 time(s))
+
+graphs.CallGraph::print:
+	---> graphs.FileLogger::log (1 time(s))
+	---> graphs.CallGraph::toString (1 time(s))
+
+utility.Utility::getMethodFullyQualifiedName:
+	---> java.lang.StringBuffer::toString (1 time(s))
+	---> java.lang.StringBuffer::append (3 time(s))
+	---> utility.Utility::getClassFullyQualifiedName (1 time(s))
+	---> utility.MethodDeclaration::getName (1 time(s))
+
+identificationModule.Cluster::addClasses:
+	---> java.util.Set<java.lang.String>::contains (1 time(s))
+	---> identificationModule.Cluster::getClasses (1 time(s))
+	---> java.util.Set<java.lang.String>::add (1 time(s))
+
+identificationModule.Cluster::hasSameClasses:
+	---> identificationModule.Cluster::getClasses (1 time(s))
+	---> java.lang.String::equals (1 time(s))
+
+spoon.SpoonCouplingGraph::createUnidiractionalWeightedCouplingGraph:
+	---> spoon.SpoonCouplingMetric::getCouplingMetricBetweenAB (1 time(s))
+	---> java.util.Map<java.lang.String,java.lang.Double>::put (1 time(s))
+	---> spoon.CtModel::getAllTypes (2 time(s))
+	---> spoon.CtType::getQualifiedName (2 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::get (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::containsKey (1 time(s))
+	---> java.lang.String::equals (1 time(s))
+	---> java.util.Map<java.lang.String,java.util.Map<java.lang.String,java.lang.Double>>::put (1 time(s))
+
+graphs.StaticCallGraph::addInvocations:
+	---> graphs.MethodDeclaration::accept (1 time(s))
+	---> graphs.StaticCallGraph::getMethodInvocationName (1 time(s))
+	---> graphs.MethodInvocationsCollector::getMethodInvocations (1 time(s))
+	---> graphs.StaticCallGraph::addMethod (1 time(s))
+	---> graphs.StaticCallGraph::addInvocation (1 time(s))
+
+
