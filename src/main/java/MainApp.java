@@ -121,9 +121,9 @@ public class MainApp {
                     couplingMetric = new CouplingMetric(callGraph2);
                     couplingGraph = new CouplingGraph(callGraph2, couplingMetric);
                     couplingGraph.generateCouplingGraph();
-                    Utility.saveGraph(MainApp.path + "UnidirectionalCouplingGraph.dot",
+                    Utility.saveGraph(MainApp.path + "graphe-de-couplage-unidirectional.dot",
                             Utility.getGraphAsDot(couplingGraph.getCouplings()));
-                    Utility.saveGraphAsPNG(MainApp.path + "UnidirectionalCouplingGraph.png",
+                    Utility.saveGraphAsPNG(MainApp.path + "graphe-de-couplage-bidirectional.png",
                             Utility.getGraphAsDot(couplingGraph.getCouplings()));
                     end = System.currentTimeMillis();
                     System.out.println(
